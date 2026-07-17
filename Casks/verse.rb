@@ -1,6 +1,6 @@
 cask "verse" do
-  version "1.3.1"
-  sha256 "ca648a5ce886561012dd4de0bbb3653c98337af95dbb4f4ec3640e3bd66b0b23"
+  version "1.4.0"
+  sha256 "3c561217364c8bd07e1bd286fa9ea126f709370c692aa47fa007b7ef426f1245"
 
   url "https://github.com/LMC4S/verse/releases/download/v#{version}/Verse-#{version}-arm64.dmg"
   name "Verse"
