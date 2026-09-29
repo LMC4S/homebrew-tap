@@ -1,6 +1,6 @@
 cask "verse" do
-  version "1.7.0"
-  sha256 "cb01d0b09f9006890b49edcf875f2d9475e921bbd9261265b9374a3686396a4c"
+  version "1.7.1"
+  sha256 "3923c463a08861f460ecd8af018c3b1556c8cc17ee1c5869a8ce55fd14cc2f12"
 
   url "https://github.com/LMC4S/verse/releases/download/v#{version}/Verse-#{version}-arm64.dmg"
   name "Verse"
@@ -21,7 +21,7 @@ cask "verse" do
   ]
 
   caveats <<~EOS
-    Verse is not signed or notarized. If macOS blocks the first launch,
-    right-click Verse in /Applications and choose Open.
+    Verse is not notarized. If macOS says it can't verify Verse on first
+    launch, open System Settings > Privacy & Security and click Open Anyway.
   EOS
 end
