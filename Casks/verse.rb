@@ -16,12 +16,18 @@ cask "verse" do
 
   app "Verse.app"
 
+  # Not notarized: macOS 27 reports quarantined copies as "damaged".
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Verse.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/Verse",
   ]
 
   caveats <<~EOS
-    Verse is not notarized. If macOS says it can't verify Verse on first
-    launch, open System Settings > Privacy & Security and click Open Anyway.
+    Verse is not notarized, so this cask removes the quarantine flag
+    from Verse.app after installing it.
   EOS
 end
